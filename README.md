@@ -1,30 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    // Portfolio Information
-    printf("=====================================\n");
-    printf("           MY PORTFOLIO              \n");
-    printf("=====================================\n\n");
+    char name[50];
+    char skills[200];
+    char bio[300];
 
-    // About Me
-    printf("ABOUT ME:\n");
-    printf("I am a passionate programmer with a focus on C development.\n");
-    printf("I enjoy problem-solving, building projects, and learning new technologies.\n\n");
+    printf("===== WELCOME TO YOUR PORTFOLIO =====\n\n");
 
-    // Projects
-    printf("PROJECTS:\n");
-    printf("1. Student Management System - A console-based CRUD app in C.\n");
-    printf("2. Calculator - Performs basic arithmetic operations.\n");
-    printf("3. Tic Tac Toe - A two-player game using arrays and logic.\n\n");
+    // Get user input
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
 
-    // Contact
-    printf("CONTACT:\n");
-    printf("Email: example@email.com\n");
-    printf("GitHub: github.com/yourusername\n");
-    printf("LinkedIn: linkedin.com/in/yourprofile\n");
+    printf("Enter your skills (comma-separated): ");
+    fgets(skills, sizeof(skills), stdin);
 
+    printf("Write a short bio: ");
+    fgets(bio, sizeof(bio), stdin);
+
+    // Display portfolio
     printf("\n=====================================\n");
+    printf("            MY PORTFOLIO             \n");
+    printf("=====================================\n");
+    printf("Name      : %s", name);
+    printf("Skills    : %s", skills);
+    printf("Bio       : %s", bio);
+    printf("=====================================\n");
 
     return 0;
 }
+
 
